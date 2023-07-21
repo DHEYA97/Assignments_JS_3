@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+        <link href="style/all.min.css" rel="stylesheet"/>
+        <link href="style/bootstrap.min.css" rel="stylesheet"/>
+        <link href="style/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <section id="Book" class="Book mx-auto text-center">
+            <div class="container pt-5">
+                <h1 class="py-2 position-relative d-inline">Bookmarker</h1>
+                <div class="Book-body my-5">
+                    <h2>
+                        <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites 
+                        <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+                    <div class="form text-start fw-bold mt-5">
+                        <label for="siteName"><i class="fa-solid fa-book-bookmark py-2"></i> Site Name</label>
+                        <div class="position-relative">
+                            <input type="text" id="siteName" class="form-control mb-4" placeholder="Bookmark Name" onkeyup="regxSiteName()"/>
+                            <i id="sitename1" class="fa-solid fa-circle-exclamation position-absolute"></i>
+                            <i id="sitename2" class="fa-solid fa-check position-absolute"></i>
+                        </div>
+                        <label for="siteUrl"><i class="fa-solid fa-link py-2"></i> Site URL </label>
+                        <div class="position-relative">
+                            <input type="text" id="siteUrl" class="form-control mb-4" placeholder="Website URL" onkeyup="regxSiteUrl()"/>
+                            <i id="siteurl1" class="fa-solid fa-circle-exclamation position-absolute"></i>
+                            <i id="siteurl2" class="fa-solid fa-check position-absolute"></i>
+                        </div>
+                        <div class="m-auto text-center">
+                            <button class="btn btn-danger px-5" id="submitBtn" onclick="createSite()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <div class="table-responsive">
+                        <table class="table text-center table-light">
+                            <thead>
+                                <tr>
+                                    <th>Index</th>
+                                    <th>Website Name</th>
+                                    <th>Visit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="displaysite">
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>            
+        </div>
+        </section>
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="js/sweetalert2.all.min.js"></script>
+        <script src="js/js.js"></script>
+    </body>
+</html>
